@@ -431,7 +431,7 @@ function Set-UwpAppRegistryEntry {
         $max = 30
         $attempts = 0
         do {
-            Stop-Process -Name 'SearchHost' -Force -ErrorAction SilentlyContinue
+            Stop-Process -Name 'SearchHost', 'ShellExperienceHost', 'AppActions' -Force -ErrorAction SilentlyContinue
             Start-Sleep 0.25
             reg.exe LOAD $AppSettingsRegPath $FilePath *>$null
             $attempts++
