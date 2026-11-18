@@ -57,7 +57,7 @@ if ($psversion -ge 7) {
 
 If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]'Administrator')) {
     #leave out the trailing " to add supplied params first 
-    $arglist = "-NoProfile -ExecutionPolicy Bypass -C `"& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/zoicware/RemoveWindowsAI/main/RemoveWindowsAi.ps1')))"
+    $arglist = "-NoProfile -ExecutionPolicy Bypass -C `"& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/itgroceries-sudo/RemoveWindowsAI/main/RemoveWindowsAi.ps1')))"
     #pass the correct params if supplied
     if ($nonInteractive) {
         $arglist = $arglist + ' -nonInteractive'
@@ -284,7 +284,7 @@ function Write-Status {
 #setup script
 #=====================================================================================
 
-Write-Host '~ ~ ~ Remove Windows AI by @zoicware ~ ~ ~' -ForegroundColor DarkCyan
+Write-Host '~ ~ ~ Remove Windows AI by @zoicware (Forked & Fixed by IT Groceries Shop) ~ ~ ~' -ForegroundColor DarkCyan
 
 if ($EnableLogging) {
     $date = (Get-Date).ToString('MM-dd-yyyy-HH:mm') -replace ':'
@@ -1105,10 +1105,10 @@ function Install-NOAIPackage {
                 Write-Status -msg 'Downloading RemoveWindowsAI Package From Github...'
                 $ProgressPreference = 'SilentlyContinue'
                 try {
-                    Invoke-WebRequest -Uri "https://github.com/zoicware/RemoveWindowsAI/raw/refs/heads/main/RemoveWindowsAIPackage/$arch/ZoicwareRemoveWindowsAI-$($arch)1.0.0.0.cab" -OutFile "$($tempDir)ZoicwareRemoveWindowsAI-$($arch)1.0.0.0.cab" -UseBasicParsing -ErrorAction Stop
+                    Invoke-WebRequest -Uri "https://github.com/itgroceries-sudo/RemoveWindowsAI/raw/refs/heads/main/RemoveWindowsAIPackage/$arch/ZoicwareRemoveWindowsAI-$($arch)1.0.0.0.cab" -OutFile "$($tempDir)ZoicwareRemoveWindowsAI-$($arch)1.0.0.0.cab" -UseBasicParsing -ErrorAction Stop
                 }
                 catch {
-                    Write-Status -msg "Unable to Download Package at: https://github.com/zoicware/RemoveWindowsAI/raw/refs/heads/main/RemoveWindowsAIPackage/$arch/ZoicwareRemoveWindowsAI-$($arch)1.0.0.0.cab" -errorOutput
+                    Write-Status -msg "Unable to Download Package at: https://github.com/itgroceries-sudo/RemoveWindowsAI/raw/refs/heads/main/RemoveWindowsAIPackage/$arch/ZoicwareRemoveWindowsAI-$($arch)1.0.0.0.cab" -errorOutput
                     return
                 }
 
@@ -2825,7 +2825,7 @@ function install-classicapps {
         if (!(Test-Path "$($tempDir)ClassicApps")) {
             $ProgressPreference = 'SilentlyContinue'
             Write-Status -msg 'Downloading Classic Apps Files from Github...'
-            $url = 'https://github.com/zoicware/RemoveWindowsAI/archive/refs/heads/main.zip'
+            $url = 'https://github.com/itgroceries-sudo/RemoveWindowsAI/archive/refs/heads/main.zip'
             try {
                 Invoke-WebRequest -Uri $url -OutFile "$($tempDir)main.zip" -ErrorAction Stop
             }
@@ -2931,7 +2931,7 @@ else {
     }
 
     $window = New-Object System.Windows.Window
-    $window.Title = 'Remove Windows AI - by @zoicware'
+    $window.Title = 'Remove Windows AI - by @zoicware (Forked & Fixed by IT Groceries Shop)'
     $window.Width = 600
     $window.Height = 700
     $window.WindowStartupLocation = 'CenterScreen'
@@ -3592,7 +3592,7 @@ else {
 '@
     $githubButton.Template = [System.Windows.Markup.XamlReader]::Parse($githubTemplate)
     $githubButton.Add_Click({
-            Start-Process 'https://github.com/zoicware/RemoveWindowsAI'
+            Start-Process 'https://github.com/itgroceries-sudo/RemoveWindowsAI'
         })
 
     $socialPanel.Children.Add($discordButton) | Out-Null
