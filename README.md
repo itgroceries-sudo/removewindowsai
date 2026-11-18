@@ -1,6 +1,6 @@
-# Remove Windows Ai 
+# Remove Windows Ai
 
-## Note: Original project by @zoicware. 
+## Note: Original project by @zoicware.
 ```
  Forked, fixed, and maintained by IT Groceries Shop.
 ```
@@ -10,14 +10,11 @@
 </details>
 
 ## Why?
-The current 25H2 build of Windows 11 and future builds will include increasingly more AI features and components. This script aims to remove ALL of these features to improve user experience, privacy and security. 
+In Windows 11 22H2 Microsoft began adding AI features like Copilot and Recall. Since then, additional AI driven components have been added, many of which have never been publicly documented. This script aims to remove ALL of these features to improve user experience, privacy and security. 
 
 <img width="150" alt="AI-Explorer-icon" src="https://github.com/zoicware/RemoveWindowsAI/assets/118035521/33efb033-c935-416c-977d-777bb69a3737">
 
-
 ----------------------
-
-
 
 ### Script Features
  - **Disable Registry Keys** 
@@ -25,13 +22,16 @@ The current 25H2 build of Windows 11 and future builds will include increasingly
    - Disable Recall
    - Disable Input Insights and typing data harvesting 
    - Copilot in Edge
-   - Image Creator in Paint
+   - Disable AI Experiments Program in Paint
    - Remove AI Fabric Service
    - Disable AI Actions
-   - Disable AI in Paint
    - Disable Voice Access
    - Disable AI Voice Effects
    - Disable AI in Settings Search
+   - Disable Gaming Copilot
+   - Disable Copilot in All Office Apps
+   - Disable AI Features in Photos App
+   - Disable Click to Do in Snipping Tool
  - **Prevent Reinstall of AI Packages**
    - Installs custom Windows Update package to prevent reinstall of AI packages in the CBS (Component-Based Servicing) store 
  - **Disable Copilot policies** 
@@ -46,8 +46,14 @@ The current 25H2 build of Windows 11 and future builds will include increasingly
  - **Hide AI Components**
    - This will hide the settings page `AI Components` 
  - **Disable Rewrite AI Feature in Notepad**
- - **Remove Recall Tasks**
-   - Forcibly removes all instances of Recall's scheduled tasks
+ - **Remove Windows AI Tasks**
+   - Forcibly removes all instances of Windows AI scheduled tasks
+ - **Update Cleanup Check**
+   - Creates scheduled task to check if Windows has been updated and if it has, newly installed AI features will be removed
+ - **Disable Defender AI**
+   - Disables the Defender AI Platform host process and settings
+ - **Disable NPU Device**
+   - Disables the NPU (Neural Processing Unit) on relevant hardware. 
 
  - #### Install Classic Apps
    - These options will allow you to replace the modern AI infested apps with their classic version
@@ -58,32 +64,31 @@ The current 25H2 build of Windows 11 and future builds will include increasingly
 > **[Disable Other AI Features](https://github.com/itgroceries-sudo/RemoveWindowsAI/blob/main/OtherAIFeatures.md)**
   
 ### Read the Script Docs Here
-  > **[Documentation](https://github.com/itgroceries-sudo/RemoveWindowsAI/blob/main/Documentation.md)**
+> **[Documentation](https://github.com/itgroceries-sudo/RemoveWindowsAI/blob/main/Documentation.md)**
 
-  > [!WARNING]
-  > Some third party anti-viruses will falsely detect the script as malicious, obviously this is a false positive and the anti-virus will need to be temporarily disabled or set the script as an exclusion.
-  >
-  > Due to the nature of making advanced changes to the system many debloat tools/scripts will be falsely detected as malware... if you are unsure about the script I always recommend testing any software in a virtual machine first
+> [!WARNING]
+> Some third party anti-viruses will falsely detect the script as malicious, obviously this is a false positive and the anti-virus will need to be temporarily disabled or set the script as an exclusion.
+>
+> Due to the nature of making advanced changes to the system many debloat tools/scripts will be falsely detected as malware... if you are unsure about the script I always recommend testing any software in a virtual machine first
 
 ---
 
+### How to Use
 
- ### How to Use
- 
- #### Run From Powershell Console as Administrator
- ---
+#### Run From Powershell Console as Administrator
+---
 
- > [!WARNING]
- > Running the script with PowerShell 7 is no longer supported and it WILL cause issues, to avoid this ensure you are running Windows PowerShell (5.1)
- >
+> [!WARNING]
+> Running the script with PowerShell 7 is no longer supported and it WILL cause issues, to avoid this ensure you are running Windows PowerShell (5.1)
 
- ### Launch with UI
- ```PowerShell
- & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/itgroceries-sudo/RemoveWindowsAI/main/RemoveWindowsAi.ps1")))
- ```
+### Launch with UI
+```PowerShell
+& ([scriptblock]::Create((irm "https://raw.githubusercontent.com/itgroceries-sudo/RemoveWindowsAI/main/RemoveWindowsAi.ps1")))
+```
+
 <!--
 ### Compact Command:
-##### Link shortened using open source link shortener: https://bitly.com
+##### Link shortened using open source link shortener: [https://bitly.com](https://bitly.com)
 ```PowerShell
 & ([scriptblock]::Create((irm 'https://bit.ly')))
 ```
@@ -97,21 +102,24 @@ The current 25H2 build of Windows 11 and future builds will include increasingly
   </p>
 </details>
 
-&nbsp;
-
 ### Command Line Options
 
 **Run in Non-Interactive Mode with All Options**
- ```PowerShell
- & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/itgroceries-sudo/removewindowsai/main/RemoveWindowsAi.ps1"))) -nonInteractive -AllOptions
- ```
+```PowerShell
+& ([scriptblock]::Create((irm "https://raw.githubusercontent.com/itgroceries-sudo/RemoveWindowsAI/main/RemoveWindowsAi.ps1"))) -nonInteractive -AllOptions
+```
 
 --- 
 
 **Run with Specific Options Example**
- ```PowerShell
- & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/itgroceries-sudo/removewindowsai/main/RemoveWindowsAi.ps1"))) -nonInteractive -Options DisableRegKeys,RemoveAppxPackages,DisableCopilotPolicies 
- ```
+```PowerShell
+& ([scriptblock]::Create((irm "https://raw.githubusercontent.com/itgroceries-sudo/RemoveWindowsAI/main/RemoveWindowsAi.ps1"))) -nonInteractive -Options DisableRegKeys,RemoveAppxPackages,DisableCopilotPolicies 
+```
+
+**Run with Specific Options Excluded Example**
+```PowerShell
+& ([scriptblock]::Create((irm "https://raw.githubusercontent.com/itgroceries-sudo/RemoveWindowsAI/main/RemoveWindowsAi.ps1"))) -nonInteractive -ExcludeOptions -Options DisableRegKeys,RemoveAppxPackages,DisableCopilotPolicies 
+```
 
 **All Possible Options:**
 ```
@@ -124,13 +132,16 @@ RemoveCBSPackages
 RemoveAIFiles               
 HideAIComponents            
 DisableRewrite      
-RemoveRecallTasks
+RemoveWindowsAITasks
+UpdateCleanupCheck
+DisableDefenderAI
+DisableNPUDevice
 ```
 
 **Run Install Classic Apps**
- ```PowerShell
- & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/itgroceries-sudo/removewindowsai/main/RemoveWindowsAi.ps1"))) -nonInteractive -InstallClassicApps photoviewer,mspaint,snippingtool,notepad  
- ```
+```PowerShell
+& ([scriptblock]::Create((irm "https://raw.githubusercontent.com/itgroceries-sudo/RemoveWindowsAI/main/RemoveWindowsAi.ps1"))) -nonInteractive -InstallClassicApps photoviewer,mspaint,snippingtool,notepad  
+```
 
 **All Possible Options:**
 ```
@@ -141,23 +152,22 @@ notepad
 photoslegacy 
 ```
 
-
 **Run with Backup Mode Enabled**
 
 > [!NOTE]
 > Backup Mode needs to be enabled to be able to fully revert
 > 
- ```PowerShell
- & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/itgroceries-sudo/removewindowsai/main/RemoveWindowsAi.ps1"))) -nonInteractive -backupMode -AllOptions
- ```
+> **This creates a restore point for you**
+```PowerShell
+& ([scriptblock]::Create((irm "https://raw.githubusercontent.com/itgroceries-sudo/RemoveWindowsAI/main/RemoveWindowsAi.ps1"))) -nonInteractive -backupMode -AllOptions
+```
 
 ---
 
 **Revert Changes**
-
- ```PowerShell
- & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/itgroceries-sudo/removewindowsai/main/RemoveWindowsAi.ps1"))) -nonInteractive -revertMode -AllOptions
- ```
+```PowerShell
+& ([scriptblock]::Create((irm "https://raw.githubusercontent.com/itgroceries-sudo/RemoveWindowsAI/main/RemoveWindowsAi.ps1"))) -nonInteractive -revertMode -AllOptions
+```
 
 ---
 
@@ -166,46 +176,26 @@ photoslegacy
 Given that Microsoft are continually updating and adding new AI features this script will attempt to stay updated for the newest stable build.
 
 You can view the newest updates to the script here:
-https://github.com/itgroceries-sudo/RemoveWindowsAI/commits/main/
+[https://github.com/itgroceries-sudo/RemoveWindowsAI/commits/main/](https://github.com/itgroceries-sudo/RemoveWindowsAI/commits/main/)
 
- > [!NOTE]  
+> [!NOTE]  
 > Any feature added to an Insider build will not be added to this script till it's added to the latest stable release
 
- 
 > [!TIP]
 > **Submitting an AI Feature**
 >
 > If you find an AI feature or registry key that is not currently removed or disabled by the script submit an issue with as much information as possible and I will add it to the script.
 
+### Donation (Original Author)
 
-### Donation 
+If you would like to support the original author's work consider donating :)
 
-If you would like to support my work consider donating :)
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/zoicware)
-
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)]([https://www.buymeacoffee.com/zoicware](https://www.buymeacoffee.com/zoicware))
 
 ### Join The Discord
 
 [![Discord](https://discordapp.com/api/guilds/1173717737017716777/widget.png?style=banner1)](https://discord.gg/VsC7XS5vgA)
 
-
 ### YT Guide
 #### [How to Remove ALL Windows AI Features](https://youtu.be/j5_eEBWGHFw)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+````[cite: 1, 7]
