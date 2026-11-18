@@ -98,8 +98,8 @@ In Windows 11 22H2 Microsoft began adding AI features like Copilot and Recall. S
 <details>
   <summary>Click to View UI</summary>
   <p align="center">
-    <img width="596" height="698" alt="image" src="https://github.com/user-attachments/assets/edc014d5-782c-45d7-809e-b1ab55f3f9e7" />
-    <img width="596" height="698" alt="image" src="https://github.com/user-attachments/assets/2eea5504-b005-4917-b5b2-8d7741283398" />
+    <img width="48%" alt="UI Main Options" src="https://github.com/user-attachments/assets/edc014d5-782c-45d7-809e-b1ab55f3f9e7" />
+    <img width="48%" alt="UI Classic Apps" src="https://github.com/user-attachments/assets/2eea5504-b005-4917-b5b2-8d7741283398" />
   </p>
 </details>
 
