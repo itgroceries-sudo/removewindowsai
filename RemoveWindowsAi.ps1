@@ -4232,15 +4232,21 @@ else {
     $bottomRow.Height = [System.Windows.GridLength]::new(80)
     $mainGrid.RowDefinitions.Add($bottomRow) | Out-Null
 
-   
     $title = New-Object System.Windows.Controls.TextBlock
-    $title.Text = 'Remove Windows AI'
     $title.FontSize = 18
     $title.FontWeight = 'Bold'
-    $title.Foreground = [System.Windows.Media.Brushes]::Cyan
     $title.HorizontalAlignment = 'Center'
     $title.VerticalAlignment = 'Center'
     $title.Margin = '0,20,0,0'
+
+    $runMain = New-Object System.Windows.Documents.Run 'Remove Windows AI '
+    $runMain.Foreground = [System.Windows.Media.Brushes]::Cyan
+    $title.Inlines.Add($runMain) | Out-Null
+
+    $runSub = New-Object System.Windows.Documents.Run '(Revived)'
+    $runSub.Foreground = [System.Windows.Media.Brushes]::Yellow
+    $title.Inlines.Add($runSub) | Out-Null
+
     [System.Windows.Controls.Grid]::SetRow($title, 0)
     $mainGrid.Children.Add($title) | Out-Null
 
