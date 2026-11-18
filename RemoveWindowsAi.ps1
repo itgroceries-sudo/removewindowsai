@@ -4204,7 +4204,7 @@ else {
     }
 
     $window = New-Object System.Windows.Window
-    $window.Title = 'Remove Windows AI - by @zoicware'
+    $window.Title = 'Remove Windows AI - by @zoicware (Forked & Fixed by IT Groceries Shop)'
     $window.Width = 600
     $window.Height = 700
     $window.WindowStartupLocation = 'CenterScreen'
