@@ -6,7 +6,8 @@
 ```
 <details>
   <summary>Click to View UI</summary>
-<img width="596" height="698" alt="image" src="https://github.com/user-attachments/assets/d4068309-a277-4bfa-b6c8-634602416e22" />
+<img width="596" height="698" alt="image" src="https://github.com/user-attachments/assets/d213e216-1bde-4d6b-a449-692a679a9445" />
+
 </details>
 
 ## Why?
@@ -97,8 +98,8 @@ In Windows 11 22H2 Microsoft began adding AI features like Copilot and Recall. S
 <details>
   <summary>Click to View UI</summary>
   <p align="center">
-    <img width="48%" alt="UI Main Options" src="https://github.com/user-attachments/assets/0d89672f-52fb-4274-8ea6-77aaf014928d" />
-    <img width="48%" alt="UI Classic Apps" src="https://github.com/user-attachments/assets/8b861a29-1a1b-428b-86ac-fd7f07cbc6b1" />
+    <img width="596" height="698" alt="image" src="https://github.com/user-attachments/assets/edc014d5-782c-45d7-809e-b1ab55f3f9e7" />
+    <img width="596" height="698" alt="image" src="https://github.com/user-attachments/assets/2eea5504-b005-4917-b5b2-8d7741283398" />
   </p>
 </details>
 
