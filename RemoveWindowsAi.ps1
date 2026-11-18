@@ -438,7 +438,7 @@ function Set-UwpAppRegistryEntry {
         }while ($LASTEXITCODE -ne 0 -and $attempts -le $max)
 
         if ($attempts -ge $max) {
-            Write-Status -msg 'Max attempts reached while trying to load settings.dat' -errorOutput
+            # Write-Status -msg 'Max attempts reached while trying to load settings.dat' -errorOutput
             return
         }
       
