@@ -1,4 +1,14 @@
-# Remove Windows Ai
+# Remove Windows Ai 
+
+## Note: Original project by @zoicware. 
+```
+ Forked, fixed, and maintained by IT Groceries Shop.
+```
+<details>
+  <summary>Click to View UI</summary>
+<img width="596" height="698" alt="image" src="https://github.com/user-attachments/assets/d4068309-a277-4bfa-b6c8-634602416e22" />
+</details>
+
 ## Why?
 The current 25H2 build of Windows 11 and future builds will include increasingly more AI features and components. This script aims to remove ALL of these features to improve user experience, privacy and security. 
 
@@ -45,10 +55,10 @@ The current 25H2 build of Windows 11 and future builds will include increasingly
  
 #### Manual AI Disabling
 - Unfortunately, not all features and settings can be disabled via a script. This guide will show additional AI features to disable.
-> **[Disable Other AI Features](https://github.com/zoicware/RemoveWindowsAI/blob/main/OtherAIFeatures.md)**
+> **[Disable Other AI Features](https://github.com/itgroceries-sudo/RemoveWindowsAI/blob/main/OtherAIFeatures.md)**
   
 ### Read the Script Docs Here
-  > **[Documentation](https://github.com/zoicware/RemoveWindowsAI/blob/main/Documentation.md)**
+  > **[Documentation](https://github.com/itgroceries-sudo/RemoveWindowsAI/blob/main/Documentation.md)**
 
   > [!WARNING]
   > Some third party anti-viruses will falsely detect the script as malicious, obviously this is a false positive and the anti-virus will need to be temporarily disabled or set the script as an exclusion.
@@ -69,21 +79,23 @@ The current 25H2 build of Windows 11 and future builds will include increasingly
 
  ### Launch with UI
  ```PowerShell
- & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/zoicware/RemoveWindowsAI/main/RemoveWindowsAi.ps1")))
+ & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/itgroceries-sudo/RemoveWindowsAI/main/RemoveWindowsAi.ps1")))
  ```
- ### Compact Command:
- ##### Link shortened using open source link shortener: https://kutt.it/
- ```PowerShell
- & ([scriptblock]::Create((irm 'https://kutt.it/RWAI')))
- ```
+<!--
+### Compact Command:
+##### Link shortened using open source link shortener: https://bitly.com
+```PowerShell
+& ([scriptblock]::Create((irm 'https://bit.ly')))
+```
+-->
 
-
-
- <details>  
+<details>
   <summary>Click to View UI</summary>
-  <img width="586" height="693" alt="Capture2" src="https://github.com/user-attachments/assets/fa105ba5-c1dc-447c-ae2e-7ee373291042" />
-  <img width="586" height="693" alt="Capture2" src="https://github.com/user-attachments/assets/8a446a23-7c47-468e-856b-1e783205c511" />
-</details>  
+  <p align="center">
+    <img width="48%" alt="UI Main Options" src="https://github.com/user-attachments/assets/0d89672f-52fb-4274-8ea6-77aaf014928d" />
+    <img width="48%" alt="UI Classic Apps" src="https://github.com/user-attachments/assets/8b861a29-1a1b-428b-86ac-fd7f07cbc6b1" />
+  </p>
+</details>
 
 &nbsp;
 
@@ -91,14 +103,14 @@ The current 25H2 build of Windows 11 and future builds will include increasingly
 
 **Run in Non-Interactive Mode with All Options**
  ```PowerShell
- & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/zoicware/RemoveWindowsAI/main/RemoveWindowsAi.ps1"))) -nonInteractive -AllOptions
+ & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/itgroceries-sudo/removewindowsai/main/RemoveWindowsAi.ps1"))) -nonInteractive -AllOptions
  ```
 
 --- 
 
 **Run with Specific Options Example**
  ```PowerShell
- & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/zoicware/RemoveWindowsAI/main/RemoveWindowsAi.ps1"))) -nonInteractive -Options DisableRegKeys,RemoveAppxPackages,DisableCopilotPolicies 
+ & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/itgroceries-sudo/removewindowsai/main/RemoveWindowsAi.ps1"))) -nonInteractive -Options DisableRegKeys,RemoveAppxPackages,DisableCopilotPolicies 
  ```
 
 **All Possible Options:**
@@ -117,7 +129,7 @@ RemoveRecallTasks
 
 **Run Install Classic Apps**
  ```PowerShell
- & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/zoicware/RemoveWindowsAI/main/RemoveWindowsAi.ps1"))) -nonInteractive -InstallClassicApps photoviewer,mspaint,snippingtool,notepad  
+ & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/itgroceries-sudo/removewindowsai/main/RemoveWindowsAi.ps1"))) -nonInteractive -InstallClassicApps photoviewer,mspaint,snippingtool,notepad  
  ```
 
 **All Possible Options:**
@@ -136,7 +148,7 @@ photoslegacy
 > Backup Mode needs to be enabled to be able to fully revert
 > 
  ```PowerShell
- & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/zoicware/RemoveWindowsAI/main/RemoveWindowsAi.ps1"))) -nonInteractive -backupMode -AllOptions
+ & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/itgroceries-sudo/removewindowsai/main/RemoveWindowsAi.ps1"))) -nonInteractive -backupMode -AllOptions
  ```
 
 ---
@@ -144,7 +156,7 @@ photoslegacy
 **Revert Changes**
 
  ```PowerShell
- & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/zoicware/RemoveWindowsAI/main/RemoveWindowsAi.ps1"))) -nonInteractive -revertMode -AllOptions
+ & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/itgroceries-sudo/removewindowsai/main/RemoveWindowsAi.ps1"))) -nonInteractive -revertMode -AllOptions
  ```
 
 ---
@@ -154,7 +166,7 @@ photoslegacy
 Given that Microsoft are continually updating and adding new AI features this script will attempt to stay updated for the newest stable build.
 
 You can view the newest updates to the script here:
-https://github.com/zoicware/RemoveWindowsAI/commits/main/
+https://github.com/itgroceries-sudo/RemoveWindowsAI/commits/main/
 
  > [!NOTE]  
 > Any feature added to an Insider build will not be added to this script till it's added to the latest stable release
