@@ -3418,7 +3418,7 @@ function Update-Cleanup-Check {
         #grab update cleanup script from github instead of embedding it in here
         try {
             Write-Status -msg 'Attempting to get Update Cleanup script from Github...'
-            $scriptContent = Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/zoicware/RemoveWindowsAI/refs/heads/main/RemoveAI-UpdateCleanup.ps1' -UseBasicParsing -ErrorAction Stop | Select-Object Content
+            $scriptContent = Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/itgroceries-sudo/RemoveWindowsAI/refs/heads/main/RemoveAI-UpdateCleanup.ps1' -UseBasicParsing -ErrorAction Stop | Select-Object Content
         }
         catch {
             Write-Status -msg 'Unable to get Update Cleanup script from Github!' -errorOutput
